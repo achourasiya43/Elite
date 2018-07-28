@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp"
+    android:background="@drawable/tab_bar_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_post_tab"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/active_post_icon"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/iv_chat_tab"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/inactive_chat_icon"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/iv_notification_tab"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/inactive_notification_icon"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/iv_setting_tab"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/inactive_setting_icon"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/iv_logout_tab"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/inactive_logout_icon"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="5">
+
+            <View
+                android:id="@+id/post_view"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/chat_view"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                />
+
+
+            <View
+                android:id="@+id/notification_view"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+
+            <View
+                android:id="@+id/setting_view"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+            <View
+                android:id="@+id/logout_view"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>

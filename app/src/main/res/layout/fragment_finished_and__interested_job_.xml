@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/very_light_gray"
+    tools:context="com.elite.fragment.agency_side.Finished_and_Interested_job_Fragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finished"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/lato_regular"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_16ssp"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/left_arrow_back_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/interested_finishe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/extra_rounded_gray_border"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_interested_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/extra_left_side_rounded_primary_border"
+            android:text="Interested"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_finished_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/finished_"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/light_gray"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/colorAccent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/no_data_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:text="No data found"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

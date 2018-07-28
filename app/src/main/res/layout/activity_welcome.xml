@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.elite.activity.WelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Elite"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select User Type"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_margin="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_doctor"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/inactive_new_doctor_icon">
+
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_agency"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/inactive_new_agency_logo">
+
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Agency"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/tv_continue"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Continue"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/rounded_solid_primarycolor">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

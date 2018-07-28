@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Elite</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+       <!-- AIzaSyC3C_sZ184T9SWKIzE9Wb_wwyGg0zbddPs-->
+        AIzaSyBLNU70IONFd5WwnPPE3J4DiEQfvlIrY3w
+    </string>
+
+    <string name="cancel">Cancel</string>
+    <string name="gps_not_enable">GPS not enable...</string>
+    <string name="do_you_want_to_enable">GPS is disabled Do you want to enable ?</string>
+    <string name="settings">Settings</string>
+    <string name="no_internet_found">No internet found</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="term_condition"><![CDATA[Terms & conditions]]></string>
+    <string name="finished_jobs">Finished Jobs</string>
+    <string name="change_password">Change Password</string>
+    <string name="about_us">About Us</string>
+    <string name="setting">Settings</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="looking_for">Looking for</string>
+    <string name="qualification">Qualification -</string>
+    <string name="qualification_">Qualification</string>
+    <string name="salary_per_month">Salary per month -</string>
+    <string name="number_of_vacancies">Number of vacancies -</string>
+    <string name="interested">Interested -</string>
+    <string name="job_category">Job category</string>
+    <string name="job_category_">Job category :</string>
+    <string name="finish">Finish</string>
+    <string name="number_of_vacancy">Number of vacancy :</string>
+    <string name="job_timing">Job Timing :</string>
+    <string name="job_location">Job location :</string>
+    <string name="job_information">Job Information</string>
+
+    <string name="facebook_app_id">134320517278337</string>
+    <string name="fb_login_protocol_scheme">fb134320517278337</string>
+    <!--
+        <string name="facebook_app_id">1599712166776470</string>
+    <string name="fb_login_protocol_scheme">fb1599712166776470</string>-->
+
+    <string name="finished">Finished &amp; Interested job</string>
+    <string name="finished_dr_side">Finished job</string>
+    <string name="finished_">Finished</string>
+    <string name="location">Select location</string>
+    <string name="valid_number">Enter vaild number</string>
+    <string name="enter_number">Enter phone number</string>
+    <string name="enter_country_code">Enter country code</string>
+    <string name="select_category">Select category</string>
+    <string name="enter_specialist">Enter specialist</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="plz_check_internat_connection">Please Check internet connection.!</string>
+    <string name="job_location_">Job location -</string>
+    <string name="job_date">Job date -</string>
+    <string name="g_token">952148310479-stpashicb2nt35ouacotdoichjnu0v0h.apps.googleusercontent.com</string>
+
+
+</resources>

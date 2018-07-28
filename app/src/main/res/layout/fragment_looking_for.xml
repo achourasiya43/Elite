@@ -1,0 +1,765 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/very_light_gray"
+    android:clickable="true"
+    tools:context="com.elite.fragment.doctor_side.LookingForFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/looking_for"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/lato_regular"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_16ssp"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/left_arrow_back_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/edit_post_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_update_post"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/update_post_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:scrollbars="none"
+        android:animateLayoutChanges="true">
+
+        <RelativeLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/txt_interest_agency"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@color/colorPrimaryDark"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_interested_agency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interested 9 agency"
+                        android:textSize="@dimen/_14ssp"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/right_arrow_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_fill_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fill this form to post new vacancy"
+                    android:gravity="center|left"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lato_regular"/>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ly_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/job_category_expand"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@color/colorPrimaryDark">
+
+                            <TextView
+                                android:id="@+id/text_job_category"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/job_category"
+                                android:textSize="@dimen/_14ssp"
+                                android:gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/lato_regular"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:id="@+id/expand_arrow_job"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/expand_arrow_icon"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"/>
+
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:id="@+id/tv_category_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="@dimen/_7sdp"
+                                android:layout_height="@dimen/_7sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/solid_circle"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_list_item"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:textSize="@dimen/_12ssp"
+                                android:textColor="@color/light_gray"
+                                android:gravity="center|left"
+                                android:fontFamily="@font/lato_regular"
+                                android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ly_vacancy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/job_vacancy_expand"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@color/colorPrimaryDark">
+
+                            <TextView
+                                android:id="@+id/text_vacancy_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Number of vacancy"
+                                android:textSize="@dimen/_14ssp"
+                                android:gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/lato_regular"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:id="@+id/expand_arrow_vacancy"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/expand_arrow_icon"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view_vacancy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            android:visibility="gone"/>
+
+                        <RelativeLayout
+                            android:id="@+id/ly_vacancy_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_vacancy_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/_12ssp"
+                                android:fontFamily="@font/lato_regular"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:textColor="@color/light_gray"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/light_gray"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="Job type"/>
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:gravity="center|left">
+
+                            <RadioButton
+                                android:id="@+id/radio_button_fulltime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Full time"
+                                android:buttonTint="@color/colorPrimaryDark"
+                                android:fontFamily="@font/lato_regular"
+                                android:textColor="@color/light_gray" />
+
+                            <RadioButton
+                                android:id="@+id/radio_button_parttime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Part time"
+                                android:buttonTint="@color/colorPrimaryDark"
+                                android:fontFamily="@font/lato_regular"
+                                android:textColor="@color/light_gray"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/selectd_fulltime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full time"
+                        android:checked="true"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone"/>
+
+                    <RadioButton
+                        android:id="@+id/selectd_parttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Part time"
+                        android:checked="true"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/light_gray"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/light_gray"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Qualification"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        />
+                    <EditText
+                        android:id="@+id/ed_qualification"
+                        android:layout_below="@+id/tv_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="write your qualification"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center|left"
+                        android:maxLength="100"
+                        android:textColor="@color/light_gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/light_gray"
+                        android:layout_alignParentBottom="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Need from date"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        />
+                    <TextView
+                        android:id="@+id/tv_show_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center|left"
+                        android:textColor="@color/light_gray"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/light_gray"
+                        android:layout_alignParentBottom="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_job_timing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Job timing"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        />
+                    <TextView
+                        android:id="@+id/tv_timing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center|left"
+                        android:textColor="@color/light_gray"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/light_gray"
+                        android:layout_alignParentBottom="true"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per month salary"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular" />
+
+                    <TextView
+                        android:id="@+id/tv_progress_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/light_gray"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_below="@+id/tv_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anil"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:max="10000"
+                    android:textColor="@color/light_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp">
+
+                        <EditText
+                            android:id="@+id/ed_desciption"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_gray_border"
+                            android:hint="Enter your job description"
+                            android:fontFamily="@font/lato_regular"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:textSize="@dimen/_12ssp"
+                            android:gravity="top"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLength="100"
+                            android:textColor="@color/light_gray"/>
+
+                        <TextView
+                            android:id="@+id/count_char"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="100 characters"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        />
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center|left"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/light_gray"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@color/light_gray"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_finish_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_23sdp"
+                        android:text="Finished by doctor"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="@dimen/_14ssp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finish_by_dr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        app:siBorderColor="@color/green"
+                        app:siBorderWidth="0.5dp"
+                        android:src="@drawable/app_icon"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:fontFamily="@font/lato_regular"
+                            android:maxLines="1"
+                            android:textSize="@dimen/_13ssp"/>
+
+                        <TextView
+                            android:id="@+id/phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_gray"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:maxLines="1"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="@dimen/_11ssp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_post"
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Post"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_solid_primarycolor" />
+
+
+                <LinearLayout
+                    android:id="@+id/ly_finish_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                   android:layout_margin="@dimen/_10sdp"
+                    android:weightSum="2"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/finish_dialog"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="@string/finish"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/rounded_solid_primarycolor"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/delete_job"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="Delete"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/lato_regular"
+                        android:background="@drawable/rounded_solid_primarycolor"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/no_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record not found"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="@color/colorAccent"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

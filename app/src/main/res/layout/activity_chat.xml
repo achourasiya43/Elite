@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_gray"
+    tools:context="com.elite.activity.ChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fdfdfdfdfdfdfdfdfdssdsddfdfdfdfdfdfdfd"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_16ssp"/>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_12sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/left_arrow_back_icon"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?actionBarSize"
+        android:layout_marginTop="?actionBarSize"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/light_gray"/>
+
+        <ImageView
+            android:id="@+id/send_message"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/send_icon"
+            android:padding="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimaryDark"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/img"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_45sdp"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_90sdp"
+            android:background="@null"
+            android:textSize="@dimen/_12ssp"
+            android:padding="@dimen/_3sdp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Type here..."
+            android:textColorHint="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="@color/colorAccent"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tv_send_first_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send your first messsage..."
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

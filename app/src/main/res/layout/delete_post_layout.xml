@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rounded_half_gray_border"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="@dimen/_14ssp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Are you sure want to delete this job."
+                android:gravity="center"
+                android:fontFamily="@font/lato_regular"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/tv_cancel_dialog"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rounded_solid_primarycolor"/>
+
+                    <TextView
+                        android:id="@+id/tv_done"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="Done"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:background="@drawable/rounded_solid_primarycolor"/>
+
+                </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/app_icon"
+        android:layout_gravity="center|top"
+        app:siBorderWidth="@dimen/_5sdp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:elevation="8dp"
+        app:siBorderColor="@color/colorPrimaryDark"/>
+
+
+
+
+</RelativeLayout>
